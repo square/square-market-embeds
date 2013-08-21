@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Square Market Item Embedding Responsive</title>
+    <style>
+      body {
+        font-family: sans-serif;
+        margin: 50px;
+      }
+      #container {
+        margin: 0 auto;
+        width: 760px;
+      }
+      @media (max-width: 1024px) {
+        #container {
+          width: 480px;
+        }
+      }
+      @media (max-width: 480px) {
+        #container {
+          width: 260px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Square Market Item Embedding Responsive</h1>
+    <p>Resize window to trigger different layout sizes. The embedded item should appear at a fixed size, centered in the window, with variable margins:</p>
+    <div id="container">
+      <a href="https://squareup.com/market/jack-dorsey/ginkgo-leaf-pencil" class="sq-embed-item">Ginkgo Leaf (Pencil) from Jack Dorsey on Square Market</a>
+      <script src="https://cdn.sq-api.com/market/embed.js" id="sq-embed-js" charset="utf-8"></script>
+    </div>
+    <p><a href="../index.html">&larr; Back to table of contents</a></p>
+  </body>
+</html>
