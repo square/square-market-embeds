@@ -67,6 +67,6 @@ The Masonry plug-in is used unmodified under the MIT license.
 [market]: https://squareup.com/market
 [help-center]: https://squareup.com/help/en-us/article/5168-share-items-from-square-market
 [github-pages]: http://square.github.io/square-market-embeds
-[masonry-sample]: https://square.github.io/square-market-embeds/example-masonry
+[masonry-sample]: http://square.github.io/square-market-embeds/example-masonry
 [cla]: https://spreadsheets.google.com/spreadsheet/viewform?formkey=dDViT2xzUHAwRkI3X3k5Z0lQM091OGc6MQ&ndplr=1
 [issues]: https://github.com/square/square-market-embeds/issues
