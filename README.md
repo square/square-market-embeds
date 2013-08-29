@@ -4,7 +4,7 @@ Square Market Item Embedding
 This repository contains examples for embedding items from
 [Square Market][market] into your own website.
 
-You can more about embedding and sharing items in our
+You can read more about embedding and sharing items in our
 [Help Center][help-center].
 
 Basic Embedding
