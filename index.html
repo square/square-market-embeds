@@ -10,6 +10,7 @@
       margin-bottom: 5px;
     }
     code {
+      color: #00b386;
       font-family: inherit;
       font-weight: 400;
     }
@@ -20,10 +21,6 @@
       color: #959ba2;
       line-height: 22px;
       margin-bottom: 13px;
-    }
-    figcaption code,
-    p code {
-      color: #00b386;
     }
     figcaption p {
       font-size: 12px;
@@ -60,26 +57,24 @@
       letter-spacing: normal;
       width: 100%;
     }
-    .example-embed-list li:nth-child(odd) {
-      margin-right: 10px;
-    }
     .small {
       max-width: 250px;
     }
 
-    @media screen and (max-width: 599px) {
-      .example-embed-list li:nth-child(odd) {
-        margin-right: 0;
-      }
-    }
     @media screen and (min-width: 600px) and (max-width: 767px) {
       .example-embed-list li {
         width: 281px;
+      }
+      .example-embed-list li:nth-child(odd) {
+        margin-right: 10px;
       }
     }
     @media screen and (min-width: 768px) and (max-width: 1023px) {
       .example-embed-list li {
         width: 350px;
+      }
+      .example-embed-list li:nth-child(odd) {
+        margin-right: 10px;
       }
     }
     @media screen and (min-width: 1024px) {
@@ -87,7 +82,7 @@
         width: 282px;
         margin-right: 10px;
       }
-      .example-embed-list li:nth-child(3n) {
+      .example-embed-list li:last-child {
         margin-right: 0;
       }
     }
@@ -99,12 +94,19 @@
       <a href="https://squareup.com/market" class="logo">
         <h1 class="logo-header">Square Market</h1>
       </a>
+      <nav class="header-navigation">
+        <ul class="navigation-list">
+          <li class="navigation-item-signin navigation-item">
+            <a href="https://squareup.com/market" class="header-button" id="signin-button">Visit Square Market ›</a>
+          </li>
+        </ul>
+      </nav>
     </header>
   </div>
   <div class="directory">
     <div class="wrapper">
       <h1>Embedding Items with Square Market</h1>
-      <p>This site contains examples for embedding Square Market items in your own website. Please refer to the <a href="https://github.com/square/square-market-embeds">README</a> for full documentation.</p>
+      <p>This site contains examples for embedding items published on Square Market items onto your own website. Please refer to the <a href="https://github.com/square/square-market-embeds">README</a> for full documentation.</p>
 
       <div class="example-section">
         <h3 class="example-header">Sizes</h3>
@@ -130,40 +132,33 @@
 
       <div class="example-section">
         <h3 class="example-header">Multiple Items</h3>
-        <p>You might want to embed more than one item at a time; say, in a list or gallery. The item styling should be flexible enough to support any orientation you choose. See below for a few common examples or jump straight to the <a href="example-masonry/index.html">Masonry test</a>.</p>
+        <p>You might want to embed more than one item at a time; say, in a list or gallery. The item styling should be flexible enough to support any orientation you choose. See below for an example of a responsive list or jump straight to the <a href="example-masonry/index.html">Masonry test</a>.</p>
 
         <figure class="example-embed">
           <figcaption>
-            <p><strong>Example</strong>: The embedded item is in a fixed-size container with <code>max-width: 250px</code>. Because the container is smaller than the minimum width, the item remains 274px wide.</p>
+            <p><strong>Example</strong>: The items embedded below are in an unordered list with sizes that change at each breakpoint.</p>
           </figcaption>
           <ul class="example-embed-list">
             <li><a href="https://squareup.com/market/jack-dorsey/ginkgo-leaf-pencil" class="sq-embed-item">Ginkgo Leaf (Pencil) from Jack Dorsey on Square Market</a></li>
             <li><a href="https://squareup.com/market/jack-dorsey/ginkgo-leaf-pencil" class="sq-embed-item">Ginkgo Leaf (Pencil) from Jack Dorsey on Square Market</a></li>
             <li><a href="https://squareup.com/market/jack-dorsey/ginkgo-leaf-pencil" class="sq-embed-item">Ginkgo Leaf (Pencil) from Jack Dorsey on Square Market</a></li>
           </ul>
+          <script src="https://gist.github.com/keithchu/e9b7eb05fe246b6619c9.js"></script>
         </figure>
+
       </div>
 
       <div class="example-section">
-        <h3 class="example-header">DRY</h3>
+        <h3 class="example-header">DRY (Don't Repeat Yourself)</h3>
         <p>If the script portion of the embed code is present on the page, any link to Square Market with the class <code>sq-item-embed</code> will be replaced with an embedded item. To reduce unnecessary duplication, you may only want to include the script tag once, but it won't slow down your page if you include it more than once.</p>
+
+        <script src="https://gist.github.com/keithchu/0b1f3f9d8056d348337d.js"></script>
       </div>
 
       <div class="example-section">
         <h3 class="example-header">Async</h3>
         <p>As an alternative to using the embed script as-is, you can include the script tag using <code>appendChild</code> so that it doesn't block page rendering:</p>
-        <code><pre>&lt;script&gt;
-(function(d, id, src) {
-  var s = d.getElementById(id);
-  if (!s) {
-    s = d.createElement('script');
-    s.id = id;
-    s.src = src;
-    d.head.appendChild(s);
-  }
-})(document, "sq-embed-js", "https://cdn.sq-api.com/market/embed.js");
-&lt;/script&gt;
-        </pre></code>
+        <script src="https://gist.github.com/keithchu/cff2fd99b42429bbf8a2.js"></script>
         <p>You may see the original link tags render for a moment before the script loads.</p>
       </div>
 
