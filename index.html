@@ -30,8 +30,17 @@
       line-height: 20px;
     }
     .wrapper {
-      padding: 36px 0 34px;
+      padding: 34px 0 36px;
     }
+    .footer {
+      min-height: 0 !important;
+      padding: 39px 0 34px;
+    }
+    .footer-copyright:before {
+      content: none;
+      display: none;
+    }
+
     .example-section {
       position: relative;
     }
@@ -101,58 +110,57 @@
       </a>
     </header>
   </div>
-  <div class="directory">
-    <div class="wrapper">
-      <h1>Embedding Items with Square Market</h1>
-      <p>This site contains examples for embedding Square Market items in your own website. Please refer to the <a href="https://github.com/square/square-market-embeds">README</a> for full documentation.</p>
+  <div class="wrapper container">
+    <h1>Embedding Items with Square Market</h1>
+    <p>This site contains examples for embedding Square Market items in your own website. Please refer to the <a href="https://github.com/square/square-market-embeds">README</a> for full documentation.</p>
 
-      <div class="example-section">
-        <h3 class="example-header">Sizes</h3>
-        <p>An embedded item can be between 274px and 558px wide, depending on the size of its container.</p>
-        <p>If its container is <strong>static</strong> (i.e. has a fixed width) and smaller is than 558px wide, the item will take up the entire width of the container. If the container is <strong>fluid</strong> (i.e. has a percentage width), the item will contract/expand with the size of the container. The embedded item appears centered in a container wider than 558px. Resize the window to see how it affects the examples below.</p>
-        <figure class="example-embed">
-          <figcaption>
-            <p><strong>Example</strong>: The embedded item is in a fixed-size container with <code>max-width: 250px</code>. Because the container is smaller than the minimum width, the item remains 274px wide.</p>
-          </figcaption>
-          <div class="example-embed-container small">
-            <a href="https://squareup.com/market/jack-dorsey/ginkgo-leaf-pencil" class="sq-embed-item">Ginkgo Leaf (Pencil) from Jack Dorsey on Square Market</a>
-          </div>
-        </figure>
-        <figure class="example-embed">
-          <figcaption>
-            <p><strong>Example</strong>: The embedded item is in a fixed-size container with <code>max-width: 558px</code>. It resizes based on this layout's responsive breakpoints.</p>
-          </figcaption>
-          <div class="example-embed-container">
-            <a href="https://squareup.com/market/jack-dorsey/ginkgo-leaf-pencil" class="sq-embed-item">Ginkgo Leaf (Pencil) from Jack Dorsey on Square Market</a>
-          </div>
-        </figure>
-      </div>
+    <div class="example-section">
+      <h3 class="example-header">Sizes</h3>
+      <p>An embedded item can be between 274px and 558px wide, depending on the size of its container.</p>
+      <p>If its container is <strong>static</strong> (i.e. has a fixed width) and smaller is than 558px wide, the item will take up the entire width of the container. If the container is <strong>fluid</strong> (i.e. has a percentage width), the item will contract/expand with the size of the container. The embedded item appears centered in a container wider than 558px. Resize the window to see how it affects the examples below.</p>
+      <figure class="example-embed">
+        <figcaption>
+          <p><strong>Example</strong>: The embedded item is in a fixed-size container with <code>max-width: 250px</code>. Because the container is smaller than the minimum width, the item remains 274px wide.</p>
+        </figcaption>
+        <div class="example-embed-container small">
+          <a href="https://squareup.com/market/jack-dorsey/ginkgo-leaf-pencil" class="sq-embed-item">Ginkgo Leaf (Pencil) from Jack Dorsey on Square Market</a>
+        </div>
+      </figure>
+      <figure class="example-embed">
+        <figcaption>
+          <p><strong>Example</strong>: The embedded item is in a fixed-size container with <code>max-width: 558px</code>. It resizes based on this layout's responsive breakpoints.</p>
+        </figcaption>
+        <div class="example-embed-container">
+          <a href="https://squareup.com/market/jack-dorsey/ginkgo-leaf-pencil" class="sq-embed-item">Ginkgo Leaf (Pencil) from Jack Dorsey on Square Market</a>
+        </div>
+      </figure>
+    </div>
 
-      <div class="example-section">
-        <h3 class="example-header">Multiple Items</h3>
-        <p>You might want to embed more than one item at a time; say, in a list or gallery. The item styling should be flexible enough to support any orientation you choose. See below for a few common examples or jump straight to the <a href="example-masonry/index.html">Masonry test</a>.</p>
+    <div class="example-section">
+      <h3 class="example-header">Multiple Items</h3>
+      <p>You might want to embed more than one item at a time; say, in a list or gallery. The item styling should be flexible enough to support any orientation you choose. See below for a few common examples or jump straight to the <a href="example-masonry/index.html">Masonry test</a>.</p>
 
-        <figure class="example-embed">
-          <figcaption>
-            <p><strong>Example</strong>: The embedded item is in a fixed-size container with <code>max-width: 250px</code>. Because the container is smaller than the minimum width, the item remains 274px wide.</p>
-          </figcaption>
-          <ul class="example-embed-list">
-            <li><a href="https://squareup.com/market/jack-dorsey/ginkgo-leaf-pencil" class="sq-embed-item">Ginkgo Leaf (Pencil) from Jack Dorsey on Square Market</a></li>
-            <li><a href="https://squareup.com/market/jack-dorsey/ginkgo-leaf-pencil" class="sq-embed-item">Ginkgo Leaf (Pencil) from Jack Dorsey on Square Market</a></li>
-            <li><a href="https://squareup.com/market/jack-dorsey/ginkgo-leaf-pencil" class="sq-embed-item">Ginkgo Leaf (Pencil) from Jack Dorsey on Square Market</a></li>
-          </ul>
-        </figure>
-      </div>
+      <figure class="example-embed">
+        <figcaption>
+          <p><strong>Example</strong>: The embedded item is in a fixed-size container with <code>max-width: 250px</code>. Because the container is smaller than the minimum width, the item remains 274px wide.</p>
+        </figcaption>
+        <ul class="example-embed-list">
+          <li><a href="https://squareup.com/market/jack-dorsey/ginkgo-leaf-pencil" class="sq-embed-item">Ginkgo Leaf (Pencil) from Jack Dorsey on Square Market</a></li>
+          <li><a href="https://squareup.com/market/jack-dorsey/ginkgo-leaf-pencil" class="sq-embed-item">Ginkgo Leaf (Pencil) from Jack Dorsey on Square Market</a></li>
+          <li><a href="https://squareup.com/market/jack-dorsey/ginkgo-leaf-pencil" class="sq-embed-item">Ginkgo Leaf (Pencil) from Jack Dorsey on Square Market</a></li>
+        </ul>
+      </figure>
+    </div>
 
-      <div class="example-section">
-        <h3 class="example-header">DRY</h3>
-        <p>If the script portion of the embed code is present on the page, any link to Square Market with the class <code>sq-item-embed</code> will be replaced with an embedded item. To reduce unnecessary duplication, you may only want to include the script tag once, but it won't slow down your page if you include it more than once.</p>
-      </div>
+    <div class="example-section">
+      <h3 class="example-header">DRY</h3>
+      <p>If the script portion of the embed code is present on the page, any link to Square Market with the class <code>sq-item-embed</code> will be replaced with an embedded item. To reduce unnecessary duplication, you may only want to include the script tag once, but it won't slow down your page if you include it more than once.</p>
+    </div>
 
-      <div class="example-section">
-        <h3 class="example-header">Async</h3>
-        <p>As an alternative to using the embed script as-is, you can include the script tag using <code>appendChild</code> so that it doesn't block page rendering:</p>
-        <code><pre>&lt;script&gt;
+    <div class="example-section">
+      <h3 class="example-header">Async</h3>
+      <p>As an alternative to using the embed script as-is, you can include the script tag using <code>appendChild</code> so that it doesn't block page rendering:</p>
+      <code><pre>&lt;script&gt;
 (function(d, id, src) {
   var s = d.getElementById(id);
   if (!s) {
@@ -163,16 +171,20 @@
   }
 })(document, "sq-embed-js", "https://cdn.sq-api.com/market/embed.js");
 &lt;/script&gt;
-        </pre></code>
-        <p>You may see the original link tags render for a moment before the script loads.</p>
-      </div>
-
+      </pre></code>
+      <p>You may see the original link tags render for a moment before the script loads.</p>
     </div>
   </div>
-  <footer class="footer">
-    <nav class="footer-navigation">
-      <i class="icon-square-footer"></i>
-    </nav>
+  <footer class="footer inverted-section">
+    <div class="footer-copyright">
+      <p class="copyright">© 2009–2013 Square, Inc. <span class="copyright-reserved">All rights reserved.</span></p>
+      <ul class="footer-links">
+        <li class="footer-link"><a href="https://squareup.com/security" target="_blank">Security</a></li>
+        <li class="footer-link"><a href="https://squareup.com/legal/privacy" target="_blank">Privacy</a></li>
+        <li class="footer-link"><a href="https://squareup.com/legal/market-buyer-agreement" target="_blank">Legal</a></li>
+      </ul>
+    </div>
+    <i class="icon-footer-jewel"></i>
   </footer>
 
   <script src="https://cdn.sq-api.com/market/embed.js" id="sq-embed-js" charset="utf-8"></script>
