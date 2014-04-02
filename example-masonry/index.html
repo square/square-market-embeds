@@ -2,11 +2,9 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
-
   <title>Embedding Items with Square Market – Masonry test</title>
-
-  <link href="https://squareup.com/market/assets/base.css" rel="stylesheet" media="screen">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, maximum-scale=1.0, minimal-ui" />
+  <link href="https://cdn.sq-api.com/market/assets/base.css" rel="stylesheet" media="screen">
   <style>
     h1 {
       margin-bottom: 5px;
@@ -20,8 +18,13 @@
       padding: 34px 0 36px;
     }
     .footer {
+      background: white;
+      border: none;
       min-height: 0 !important;
-      padding: 39px 0 34px;
+      padding: 5px 0 39px;
+    }
+    .footer a {
+      display: inline-block;
     }
     .footer-copyright:before {
       content: none;
@@ -35,22 +38,20 @@
       clear: both;
     }
     .masonry-item {
-      margin-bottom: 6px;
-      width: 250px;
+      padding-bottom: 9px;
+      width: 200px;
     }
     .masonry-item.masonry-lg {
-      width: 510px;
+      width: 410px;
+    }
+    @media screen and (max-width: 599px) {
+      .masonry-item.masonry-lg {
+        width: 200px;
+      }
     }
   </style>
 </head>
 <body>
-  <div class="header-wrapper">
-    <header class="header">
-      <a href="https://squareup.com/market" class="logo">
-        <h1 class="logo-header">Square Market</h1>
-      </a>
-    </header>
-  </div>
   <div class="wrapper container">
     <h1>Embedding Items with Square Market &mdash; Masonry test</h1>
     <p>Try embedding our items with popular layout plug-ins such as the fabulous <a href="http://masonry.desandro.com">Masonry</a>.</p>
@@ -131,15 +132,9 @@
     </div>
   </div>
   <footer class="footer inverted-section">
-    <div class="footer-copyright">
-      <p class="copyright">© 2009–2013 Square, Inc. <span class="copyright-reserved">All rights reserved.</span></p>
-      <ul class="footer-links">
-        <li class="footer-link"><a href="https://squareup.com/security" target="_blank">Security</a></li>
-        <li class="footer-link"><a href="https://squareup.com/legal/privacy" target="_blank">Privacy</a></li>
-        <li class="footer-link"><a href="https://squareup.com/legal/market-buyer-agreement" target="_blank">Legal</a></li>
-      </ul>
-    </div>
-    <i class="icon-footer-jewel"></i>
+    <a href="https://squareup.com/market/">
+      <i class="icon-footer-jewel"></i>
+    </a>
   </footer>
 
   <!-- include the Square Market embed.js before Masonry to ensure that the items have height -->

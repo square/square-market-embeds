@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <title>Embedding Items with Square Market</title>
-
-  <link href="https://squareup.com/market/assets/base.css" rel="stylesheet" media="screen">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, maximum-scale=1.0, minimal-ui" />
+  <link href="https://cdn.sq-api.com/market/assets/base.css" rel="stylesheet" media="screen">
   <style>
     h1 {
       margin-bottom: 5px;
@@ -33,8 +33,13 @@
       padding: 34px 0 36px;
     }
     .footer {
+      background: white;
+      border: none;
       min-height: 0 !important;
-      padding: 39px 0 34px;
+      padding: 5px 0 45px;
+    }
+    .footer a {
+      display: inline-block;
     }
     .footer-copyright:before {
       content: none;
@@ -43,6 +48,9 @@
 
     .example-section {
       position: relative;
+    }
+    .example-section:last-of-type p:last-of-type {
+      margin-bottom: 2px;
     }
     .example-section::before {
       border-top: 1px solid #eff0f1;
@@ -73,7 +81,10 @@
       margin-right: 10px;
     }
     .small {
-      max-width: 250px;
+      max-width: 200px;
+    }
+    .smaller {
+      max-width: 180px;
     }
 
     @media screen and (max-width: 599px) {
@@ -103,26 +114,27 @@
   </style>
 </head>
 <body>
-  <div class="header-wrapper">
-    <header class="header">
-      <a href="https://squareup.com/market" class="logo">
-        <h1 class="logo-header">Square Market</h1>
-      </a>
-    </header>
-  </div>
   <div class="wrapper container">
     <h1>Embedding Items with Square Market</h1>
     <p>This site contains examples for embedding Square Market items in your own website. Please refer to the <a href="https://github.com/square/square-market-embeds">README</a> for full documentation.</p>
 
     <div class="example-section">
       <h3 class="example-header">Sizes</h3>
-      <p>An embedded item can be between 274px and 558px wide, depending on the size of its container.</p>
+      <p>An embedded item can be between 200px and 558px wide, depending on the size of its container.</p>
       <p>If its container is <strong>static</strong> (i.e. has a fixed width) and smaller is than 558px wide, the item will take up the entire width of the container. If the container is <strong>fluid</strong> (i.e. has a percentage width), the item will contract/expand with the size of the container. The embedded item appears centered in a container wider than 558px. Resize the window to see how it affects the examples below.</p>
       <figure class="example-embed">
         <figcaption>
-          <p><strong>Example</strong>: The embedded item is in a fixed-size container with <code>max-width: 250px</code>. Because the container is smaller than the minimum width, the item remains 274px wide.</p>
+          <p><strong>Example</strong>: The embedded item is in a fixed-size container with <code>max-width: 200px</code>.</p>
         </figcaption>
         <div class="example-embed-container small">
+          <a href="https://squareup.com/market/jack-dorsey/ginkgo-leaf-pencil" class="sq-embed-item">Ginkgo Leaf (Pencil) from Jack Dorsey on Square Market</a>
+        </div>
+      </figure>
+      <figure class="example-embed">
+        <figcaption>
+          <p><strong>Example</strong>: The embedded item is in a fixed-size container with <code>max-width: 180px</code>. Because the container is smaller than the minimum width, the item remains 200px wide.</p>
+        </figcaption>
+        <div class="example-embed-container smaller">
           <a href="https://squareup.com/market/jack-dorsey/ginkgo-leaf-pencil" class="sq-embed-item">Ginkgo Leaf (Pencil) from Jack Dorsey on Square Market</a>
         </div>
       </figure>
@@ -142,7 +154,7 @@
 
       <figure class="example-embed">
         <figcaption>
-          <p><strong>Example</strong>: The embedded item is in a fixed-size container with <code>max-width: 250px</code>. Because the container is smaller than the minimum width, the item remains 274px wide.</p>
+          <p><strong>Example</strong>: The embedded items are in a responsive list. They will automatically adjust to the dimensions of their container.</p>
         </figcaption>
         <ul class="example-embed-list">
           <li><a href="https://squareup.com/market/jack-dorsey/ginkgo-leaf-pencil" class="sq-embed-item">Ginkgo Leaf (Pencil) from Jack Dorsey on Square Market</a></li>
@@ -176,14 +188,6 @@
     </div>
   </div>
   <footer class="footer inverted-section">
-    <div class="footer-copyright">
-      <p class="copyright">© 2009–2013 Square, Inc. <span class="copyright-reserved">All rights reserved.</span></p>
-      <ul class="footer-links">
-        <li class="footer-link"><a href="https://squareup.com/security" target="_blank">Security</a></li>
-        <li class="footer-link"><a href="https://squareup.com/legal/privacy" target="_blank">Privacy</a></li>
-        <li class="footer-link"><a href="https://squareup.com/legal/market-buyer-agreement" target="_blank">Legal</a></li>
-      </ul>
-    </div>
     <i class="icon-footer-jewel"></i>
   </footer>
 
